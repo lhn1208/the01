@@ -59,6 +59,34 @@
       "eng": "pencil",
       "kor": "연필",
       "isDone": false
+    },
+    {
+      "id": "5f67",
+      "day": "3",
+      "eng": "keyboard",
+      "kor": "키보드",
+      "isDone": false
+    },
+    {
+      "id": "b0e9",
+      "day": "4",
+      "eng": "mouse",
+      "kor": "마우스",
+      "isDone": false
+    },
+    {
+      "id": "6a30",
+      "day": "2",
+      "eng": "computer",
+      "kor": "컴퓨터",
+      "isDone": false
+    },
+    {
+      "id": "52cf",
+      "day": "5",
+      "eng": "monitor",
+      "kor": "모니터",
+      "isDone": false
     }
   ]
 }
