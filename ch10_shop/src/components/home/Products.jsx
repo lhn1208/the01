@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import {
   getProducts,
+  getCategoryProduct
 } from "../../redux/slices/productSlice";
 
 const Products = ({ category }) => {
@@ -14,8 +15,12 @@ const Products = ({ category }) => {
   const productStatus = useSelector((state) => state.productData.productStatus);
 
     useEffect(() => {
-     dispatch(getProducts());
-    }, [dispatch]);
+      if (category) {
+           dispatch(getCategoryProduct(category));
+         } else {
+           dispatch(getProducts());
+         }
+    }, [dispatch, category]);
 
   return (
     <>
