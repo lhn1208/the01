@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  padding: 12px 0px;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.paginate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 9px;
+
+}
+
+
+.paginate li {
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  background-color: rgba(141, 136, 141, 0.288);
+  margin: 0px 7px;
+}
