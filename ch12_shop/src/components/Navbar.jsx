@@ -3,9 +3,11 @@ import { BiSearch } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { SlBasket } from "react-icons/sl";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const { itemCount } = useSelector((state) => state.carts);
   
   //처음 블러 올때 카트 안의 카운터를 읽어와 화면에 뿌려지는데 getCartTotal액션에 의해서 카운터가 계산된다.
   return (
@@ -32,6 +34,7 @@ const Navbar = () => {
             className="absolute -top-3 -right-3 bg-red-500
           text-white rounded-full w-5 h-5 flex items-center justify-center "
           >
+            {itemCount}
           </div>
           <SlBasket size={28} className="cursor-pointer" />
         </div>

@@ -1,6 +1,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import productSlice from "../slices/productSlice";
 import categorySlice from "../slices/categorySlice";
+import cartSlice from "../slices/cartSlice";
 
 import {
  persistStore,
@@ -18,6 +19,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   categories: categorySlice,
   productData: productSlice, // 이 줄이 store에 "products"라는 키 생성
+  carts: cartSlice,
 });
 //상태트리
 {/*

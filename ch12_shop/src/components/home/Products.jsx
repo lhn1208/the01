@@ -11,17 +11,16 @@ import {
 
 const Products = ({ category }) => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.productData.products);
-  const productStatus = useSelector((state) => state.productData.productStatus);
-
-    useEffect(() => {
-      if (category) {
-           dispatch(getCategoryProduct(category));
-         } else {
-           dispatch(getProducts());
-         }
-    }, [dispatch, category]);
-
+  // const products = useSelector((state) => state.productData.products);
+  // const productStatus = useSelector((state) => state.productData.productStatus);
+  const { products, productStatus } = useSelector((state) => state.productData);
+  useEffect(() => {
+    if (category) {
+          dispatch(getCategoryProduct(category));
+        } else {
+          dispatch(getProducts());
+        }
+  }, [dispatch, category]);
   return (
     <>
     {productStatus === "LOADING" && <Loading />}
